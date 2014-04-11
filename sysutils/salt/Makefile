@@ -2,7 +2,7 @@
 
 COMMENT =	remote execution and configuration management system
 
-MODPY_EGG_VERSION =	0.17.4
+MODPY_EGG_VERSION =	2014.1.1
 DISTNAME =	salt-${MODPY_EGG_VERSION}
 
 CATEGORIES =	sysutils net devel
@@ -17,6 +17,7 @@ MASTER_SITES =	${MASTER_SITE_PYPI:=s/salt/}
 MODULES =	lang/python
 RUN_DEPENDS =	net/py-zmq \
 		net/py-msgpack \
+		net/py-libcloud \
 		www/py-jinja2 \
 		security/py-M2Crypto \
 		security/py-crypto \
@@ -25,10 +26,15 @@ RUN_DEPENDS =	net/py-zmq \
 TEST_DEPENDS =	devel/py-pip \
 		sysutils/salt-testing
 
+MODPY_DISTUTILS_INSTALLARGS +=	--salt-config-dir=${SYSCONFDIR}/salt
+
 #FAILED (total=569, skipped=33, passed=511, failures=16, errors=9) 
 do-test:
 	ln -sf ${LOCALBASE}/bin/pip-${MODPY_VERSION} ${WRKDIR}/bin/pip
 	@${MODPY_TEST_TARGET}
+
+do-install:
+	${MODPY_CMD} ${MODPY_DISTUTILS_INSTALL} ${MODPY_DISTUTILS_INSTALLARGS}
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/salt/
