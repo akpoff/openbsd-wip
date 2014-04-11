@@ -1139,5 +1139,11 @@ share/examples/salt/minion.sample
 @sample ${SYSCONFDIR}/salt/minion
 @sample ${SYSCONFDIR}/salt/master.d/
 @sample ${SYSCONFDIR}/salt/minion.d/
+@sample ${SYSCONFDIR}/salt/pki/
+@owner _salt-master
+@group _salt
+@sample ${SYSCONFDIR}/salt/pki/master/
+@owner
+@group
 @rcscript ${RCDIR}/salt_master
 @rcscript ${RCDIR}/salt_minion
