@@ -26,7 +26,19 @@ RUN_DEPENDS =	net/py-zmq \
 TEST_DEPENDS =	devel/py-pip \
 		sysutils/salt-testing
 
-MODPY_DISTUTILS_INSTALLARGS +=	--salt-config-dir=${SYSCONFDIR}/salt
+LOCALSTATEDIR =	${BASELOCALSTATEDIR}/salt
+SYSCONFDIR =	${BASESYSCONFDIR}/salt
+SUBST_VARS	+=	LOCALSTATEDIR SYSCONFDIR
+
+MODPY_DISTUTILS_INSTALLARGS +=	--salt-config-dir=${SYSCONFDIR} \
+								--salt-srv-root-dir=${LOCALSTATEDIR} \
+								--salt-base-file-roots-dir=${LOCALSTATEDIR}/states \
+								--salt-base-pillar-roots-dir=${LOCALSTATEDIR}/pillar \
+								--salt-base-master-roots-dir=${LOCALSTATEDIR}/salt-master \
+								--salt-pidfile-dir=${BASELOCALSTATEDIR}/run \
+								--salt-sock-dir=${BASELOCALSTATEDIR}/run/salt \
+								--salt-cache-dir=${BASELOCALSTATEDIR}/cache/salt \
+								--salt-logs-dir=${BASELOCALSTATEDIR}/log/salt
 
 #FAILED (total=569, skipped=33, passed=511, failures=16, errors=9) 
 do-test:

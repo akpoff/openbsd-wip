@@ -1,11 +1,14 @@
 @comment $OpenBSD: PLIST,v 1.6 2013/12/27 10:19:30 landry Exp $
 @newgroup _salt:722
-@newuser _salt-master:722:722:daemon:Salt-Master Daemon:${LOCALSTATEDIR}/salt:/sbin/nologin
+@newuser _salt-master:722:722:daemon:Salt-Master Daemon:${LOCALSTATEDIR}:/sbin/nologin
 @owner _salt-master
 @group _salt
-@sample ${LOCALSTATEDIR}/cache/salt/
-@sample ${LOCALSTATEDIR}/log/salt/
-@sample ${LOCALSTATEDIR}/salt/
+@sample ${BASELOCALSTATEDIR}/cache/salt/
+@sample ${BASELOCALSTATEDIR}/log/salt/
+@sample ${LOCALSTATEDIR}/
+@sample ${LOCALSTATEDIR}/states/
+@sample ${LOCALSTATEDIR}/pillar/
+@sample ${LOCALSTATEDIR}/salt-master/
 @owner
 @group
 bin/salt
@@ -1133,17 +1136,17 @@ lib/python${MODPY_VERSION}/site-packages/salt/wheel/pillar_roots.pyc
 @man man/man7/salt.7
 share/doc/pkg-readmes/${FULLPKGNAME}
 share/examples/salt/
-@sample ${SYSCONFDIR}/salt/
+@sample ${SYSCONFDIR}/
 share/examples/salt/master.sample
-@sample ${SYSCONFDIR}/salt/master
+@sample ${SYSCONFDIR}/master
 share/examples/salt/minion.sample
-@sample ${SYSCONFDIR}/salt/minion
-@sample ${SYSCONFDIR}/salt/master.d/
-@sample ${SYSCONFDIR}/salt/minion.d/
-@sample ${SYSCONFDIR}/salt/pki/
+@sample ${SYSCONFDIR}/minion
+@sample ${SYSCONFDIR}/master.d/
+@sample ${SYSCONFDIR}/minion.d/
+@sample ${SYSCONFDIR}/pki/
 @owner _salt-master
 @group _salt
-@sample ${SYSCONFDIR}/salt/pki/master/
+@sample ${SYSCONFDIR}/pki/master/
 @owner
 @group
 @rcscript ${RCDIR}/salt_master
