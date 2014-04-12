@@ -1,10 +1,11 @@
 @comment $OpenBSD: PLIST,v 1.6 2013/12/27 10:19:30 landry Exp $
 @newgroup _salt:722
-@newuser _salt-master:722:722:daemon:Salt-Master Daemon:/var/salt:/sbin/nologin
+@newuser _salt-master:722:722:daemon:Salt-Master Daemon:${LOCALSTATEDIR}/salt:/sbin/nologin
 @owner _salt-master
 @group _salt
-@sample /var/cache/salt/
-@sample /var/log/salt/
+@sample ${LOCALSTATEDIR}/cache/salt/
+@sample ${LOCALSTATEDIR}/log/salt/
+@sample ${LOCALSTATEDIR}/salt/
 @owner
 @group
 bin/salt
