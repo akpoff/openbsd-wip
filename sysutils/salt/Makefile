@@ -30,6 +30,7 @@ LOCALSTATEDIR =	${BASELOCALSTATEDIR}/salt
 SYSCONFDIR =	${BASESYSCONFDIR}/salt
 SUBST_VARS	+=	LOCALSTATEDIR SYSCONFDIR
 
+# master-roots-dir is a non-functional remainder of a non-implemented function
 MODPY_DISTUTILS_INSTALLARGS +=	--salt-config-dir=${SYSCONFDIR} \
 								--salt-srv-root-dir=${LOCALSTATEDIR} \
 								--salt-base-file-roots-dir=${LOCALSTATEDIR}/states \

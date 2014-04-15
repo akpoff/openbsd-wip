@@ -8,7 +8,6 @@
 @sample ${LOCALSTATEDIR}/
 @sample ${LOCALSTATEDIR}/states/
 @sample ${LOCALSTATEDIR}/pillar/
-@sample ${LOCALSTATEDIR}/salt-master/
 @owner
 @group
 bin/salt
