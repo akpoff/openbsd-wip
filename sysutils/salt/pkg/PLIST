@@ -691,8 +691,6 @@ lib/python${MODPY_VERSION}/site-packages/salt/renderers/py.py
 lib/python${MODPY_VERSION}/site-packages/salt/renderers/py.pyc
 lib/python${MODPY_VERSION}/site-packages/salt/renderers/pydsl.py
 lib/python${MODPY_VERSION}/site-packages/salt/renderers/pydsl.pyc
-lib/python${MODPY_VERSION}/site-packages/salt/renderers/pyobjects.py
-lib/python${MODPY_VERSION}/site-packages/salt/renderers/pyobjects.pyc
 lib/python${MODPY_VERSION}/site-packages/salt/renderers/stateconf.py
 lib/python${MODPY_VERSION}/site-packages/salt/renderers/stateconf.pyc
 lib/python${MODPY_VERSION}/site-packages/salt/renderers/wempy.py
@@ -1064,8 +1062,6 @@ lib/python${MODPY_VERSION}/site-packages/salt/utils/process.py
 lib/python${MODPY_VERSION}/site-packages/salt/utils/process.pyc
 lib/python${MODPY_VERSION}/site-packages/salt/utils/pydsl.py
 lib/python${MODPY_VERSION}/site-packages/salt/utils/pydsl.pyc
-lib/python${MODPY_VERSION}/site-packages/salt/utils/pyobjects.py
-lib/python${MODPY_VERSION}/site-packages/salt/utils/pyobjects.pyc
 lib/python${MODPY_VERSION}/site-packages/salt/utils/reclass.py
 lib/python${MODPY_VERSION}/site-packages/salt/utils/reclass.pyc
 lib/python${MODPY_VERSION}/site-packages/salt/utils/s3.py
